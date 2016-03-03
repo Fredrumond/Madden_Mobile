@@ -1,6 +1,6 @@
 <?php require_once"DB/conexao.php";?>
 
-
+<!--Inserir Jogo-->
 <form method="POST" action="acoes/inserir_jogo.php">
 	Season
 	<select name="season" >
@@ -45,7 +45,7 @@
 	<button class="btn btn-primary" type="submit" >Inserir</button>
 </form>
 
-
+<!--Visualizar Season-->
 <form method="POST" action="acoes/visualizar_season.php">
 	Season
 	<select name="season" >
@@ -61,6 +61,7 @@
 	<button class="btn btn-primary" type="submit" >Visualizar Season</button>
 </form>
 
+<!--Inserir Time-->
 <form method="POST" action="acoes/inserir_time.php">
 	Nome					
 	<input type="text" id="nome_time" name="nome_time">
@@ -90,6 +91,55 @@
 </form>
 
 
+<!--Inserir Jogador-->
+<form method="POST" action="acoes/inserir_jogador.php">
+	Nome					
+	<input type="text" id="nome_jogador" name="nome_jogador">
+	<select name="posicao" >
+		<option>Posicao</option>
+		<?php
+			$query = "SELECT * FROM posicao_jogador";
+			$result = DBExecute($query); 
+			$linha = mysqli_num_rows($result);
+			while ($row = mysqli_fetch_array($result)) { ?>
+		 		<option value="<?php echo $row['id_posicao'] ?>"><?php echo $row['sigla_posicao'] ?></option>
+		 	<?php }?>					
+	</select>			
+	AVG					
+	<input type="number" id="avg_jogador" name="avg_jogador">
+	<!--<button class="btn btn-primary" type="submit" >Limpar</button>-->					
+	<button class="btn btn-primary" type="submit" >Inserir</button>
+</form>
+
+<!--Lista Jogadores-->
+<table class="table">
+	<tr bgcolor="#00afef">					
+		<td>Time Atual</td>							
+	</tr>
+	<tr bgcolor="#00afef">					
+		<td>Nome</td>		
+		<td>Posicao</td>		
+		<td>AVG</td>					
+	</tr>			
+	<?php		
+		$query = "SELECT nome_jogador,posicao,avg_jogador,nome_posicao,sigla_posicao FROM posicao_jogador INNER JOIN jogadores WHERE jogadores.posicao = posicao_jogador.id_posicao";
+		$result = DBExecute($query);		
+		$linha = mysqli_num_rows($result);						
+		while ($row = mysqli_fetch_array($result)) 
+		{        
+    ?>
+	<tr>
+		<td><?php echo $row['nome_jogador']?></td>
+		<td><?php echo $row['sigla_posicao']?></td>
+		<td><?php echo $row['avg_jogador']?></td>
+								 		        
+	</tr>
+	<?php
+		}	
+	?>				
+</table>
+
+<!--Tabela do Historico-->
 <table class="table">
 	<tr bgcolor="#00afef">					
 		<td>Nome</td>		

@@ -8,3 +8,12 @@ SELECT nome_time FROM week INNER JOIN times WHERE week.adversario = times.id_tim
 SELECT nome_time,placar_h,placar_a  FROM week INNER JOIN times WHERE week.adversario = times.id_time ORDER BY nome_time ASC
 
 SELECT nome_time,COUNT(nome_time),SUM(placar_h),SUM(placar_a) FROM times INNER JOIN week WHERE week.adversario = times.id_time and week.adversario = '8'
+
+
+
+JOGADOR
+
+SELECT id_jogador,nome_jogador,nome_posicao,avg_jogador,nome_classe FROM jogadores INNER JOIN posicao_jogador INNER JOIN classe_jogador
+
+SELECT nome_jogador,posicao,avg_jogador,nome_posicao FROM posicao_jogador INNER JOIN jogadores WHERE jogadores.posicao = posicao_jogador.id_posicao
+
