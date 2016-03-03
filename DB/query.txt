@@ -1,0 +1,10 @@
+#filtrar pontos convertidos em X adversario
+SELECT SUM(placar_h) As pontos FROM week where adversario = '8';
+
+SELECT SUM(placar_h) As pontos FROM week INNER JOIN times WHERE week.adversario = times.id_time and week.adversario = '8';
+
+SELECT nome_time FROM week INNER JOIN times WHERE week.adversario = times.id_time ORDER BY nome_time ASC
+
+SELECT nome_time,placar_h,placar_a  FROM week INNER JOIN times WHERE week.adversario = times.id_time ORDER BY nome_time ASC
+
+SELECT nome_time,COUNT(nome_time),SUM(placar_h),SUM(placar_a) FROM times INNER JOIN week WHERE week.adversario = times.id_time and week.adversario = '8'

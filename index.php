@@ -92,22 +92,27 @@
 
 <table class="table">
 	<tr bgcolor="#00afef">					
-		<td>Nome</td>
-		<td>Conferencia</td>
-		<td>Divisao</td>					
+		<td>Nome</td>		
+		<td>Jogos</td>
+		
+		<td>PC</td>
+		<td>PS</td>					
 	</tr>			
 	<?php
-		$teste = array();
-		$query = "SELECT * FROM times"; /*asc*/
-		$result = DBExecute($query); 
-		$linha = mysqli_num_rows($result);		
+		$teste1 = 0;
+		$teste2 = 0;
+		$teste3 = 0;
+		$query = "SELECT nome_time,COUNT(nome_time),SUM(placar_h),SUM(placar_a) FROM times INNER JOIN week WHERE week.adversario = times.id_time";
+		$result = DBExecute($query);		
+		$linha = mysqli_num_rows($result);						
 		while ($row = mysqli_fetch_array($result)) 
 		{        
     ?>
 	<tr>
 		<td><?php echo $row['nome_time']?></td>
-		<td><?php echo $row['conferencia']?></td>
-		<td><?php echo $row['divisao']?></td>			 		        
+		<td><?php echo $teste1?></td>
+		<td><?php echo $teste2?></td>	
+		<td><?php echo $teste3?></td>							 		        
 	</tr>
 	<?php
 		}	
