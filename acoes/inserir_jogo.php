@@ -14,7 +14,7 @@ $query = "INSERT INTO week(id_season,week,id_jogo,adversario,placar_h,placar_a) 
 DBExecute($query);
 
 
-header("Location: ../season_teste.php");
+header("Location: ../index.php");
 
 
 ?>
