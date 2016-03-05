@@ -19,13 +19,15 @@ abstract class ConDB
 #$conn->getConn();
 
 #teste CRUD
-$crud=new CRUD;
-$crud->insert('teste','nome=?',array('frederico'));
+#$crud=new CRUD;
+#$crud->insert('teste','nome=?',array('frederico'));
 #$crud->insert('user','user=?,email=?',array('teste','teste2@teste'));
 #$crud->insert('tarefa','tarefas=?',array())
-#$sel=$crud->select('*','user','',array());
+#$sel=$crud->select('*','teste','',array());
 #foreach($sel as $reg){
-#	var_dump($reg);
+	#var_dump($reg);
+#	print $reg['id_test']."\t";
+#	print $reg['nome']."\n";
 #}
 
 #$upd=$crud->update('user','user=?,email=? WHERE id=?',array('jose','agulhas@j',1));
