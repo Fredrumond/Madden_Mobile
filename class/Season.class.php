@@ -17,6 +17,12 @@ class Season extends CRUD {
     	$crd = new CRUD();
     	$crd->update('season','nome_season=?,data_inicio=?,data_final=? WHERE id_season=?',array($nome_season,$data_inicio,$data_final,$id_season));
     }
+
+    #BUGADA
+    public function deletaSeason($id_season){
+    	$crd = new CRUD();
+    	$crd->delete('season','WHERE id=?',array($id_season));
+    }
 }
 
 ?>

@@ -6,6 +6,9 @@
 	$season=new Season;
 
 	#$season->insereSeason('teste2','11/11/11','12/12/12');
-	$season->editaSeason('7','Season 4','13/13/13','14/14/14');
+	#$season->editaSeason('7','Season 4','13/13/13','14/14/14');
+	$season->deletaSeason('1');
+
+
 
 ?>

@@ -14,15 +14,8 @@ abstract class ConDB
 		return $this->setConn();
 	}
 }
-#teste de conexao
-#$conn=new ConDB;
-#$conn->getConn();
 
-#teste CRUD
-#$crud=new CRUD;
-#$crud->insert('teste','nome=?',array('frederico'));
-#$crud->insert('user','user=?,email=?',array('teste','teste2@teste'));
-#$crud->insert('tarefa','tarefas=?',array())
+$crud=new CRUD;
 #$sel=$crud->select('*','teste','',array());
 #foreach($sel as $reg){
 	#var_dump($reg);
@@ -32,4 +25,5 @@ abstract class ConDB
 
 #$upd=$crud->update('user','user=?,email=? WHERE id=?',array('jose','agulhas@j',1));
 #$crud->delete('user','WHERE id=?',array(1));
+$crud->delete('season','WHERE id=?',array(2));
 
