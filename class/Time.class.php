@@ -19,15 +19,14 @@ class Time extends CRUD {
     	
     }
 
-    #BUGADA
     public function editaTime($nome_time,$conferencia,$divisao,$id_time){
     	$crd = new CRUD();
     	$crd->update('times','nome_time=?,conferencia=?,divisao=? WHERE id_time=?',array($nome_time,$conferencia,$divisao,$id_time));
     }
-
-    #BUGADA
-    public function deletaTime(){
-    	
+    
+    public function deletaTime($id_time){
+    	$crd = new CRUD();
+        $crd->delete('times','WHERE id_time=?',array($id_time));
     }
 }
 

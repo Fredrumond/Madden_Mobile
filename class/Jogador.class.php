@@ -22,8 +22,7 @@ class Jogador extends CRUD {
     #BUGADA
     public function deletaJogador($id_jogador){
     	$crd = new CRUD();
-        $crd->delete('jogadores','WHERE id_jogador=?',array($id_jogador));
-        #$crud->delete('user','WHERE id=?',array(1));
+        $crd->delete('jogadores','WHERE id_jogador=?',array($id_jogador));        
     }
 }
 

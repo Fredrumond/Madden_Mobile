@@ -17,16 +17,15 @@ class Week extends CRUD {
     	$crd = new CRUD();
     	$crd->insert('week','id_season=?,week=?,id_jogo=?,adversario=?,placar_h=?,placar_a=?,fora=?,casa=?',array($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa));
     }
-
-    #BUGADA
+    
     public function editaWeek($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa,$id_week){
     	$crd = new CRUD();
-    	$crd->update('id_season=?,week=?,id_jogo=?,adversario=?,placar_h=?,placar_a=?,fora=?,casa=? WHERE id_week=?',array($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa,$id_week));
+    	$crd->update('week','id_season=?,week=?,id_jogo=?,adversario=?,placar_h=?,placar_a=?,fora=?,casa=? WHERE id_week=?',array($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa,$id_week));
     }
-
-    #BUGADA
-    public function deletaWeek(){
-    	
+    
+    public function deletaWeek($id_week){
+    	$crd = new CRUD();
+        $crd->delete('week','WHERE id_week=?',array($id_week));
     }
 }
 
