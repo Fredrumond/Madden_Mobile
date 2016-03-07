@@ -13,9 +13,9 @@ class Week extends CRUD {
     private $fora;
     private $casa;
 
-    public function insereWeek($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa){
+    public function insereWeek($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a){
     	$crd = new CRUD();
-    	$crd->insert('week','id_season=?,week=?,id_jogo=?,adversario=?,placar_h=?,placar_a=?,fora=?,casa=?',array($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa));
+    	$crd->insert('week','id_season=?,week=?,id_jogo=?,adversario=?,placar_h=?,placar_a=?',array($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a));
     }
     
     public function editaWeek($id_season,$week,$id_jogo,$adversario,$placar_h,$placar_a,$fora,$casa,$id_week){

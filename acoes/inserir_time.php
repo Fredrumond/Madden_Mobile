@@ -1,15 +1,15 @@
 <?php 
 
-require_once"../DB/conexao.php";
+require_once ('../class/ConDB.class.php');
+require_once ('../class/CRUD.class.php');
+require_once ('../class/Time.class.php');
 
-$nome = DBEscape($_POST['nome_time']);
-$conferencia = DBEscape($_POST['conferencia']);
-$divisao = DBEscape($_POST['divisao']);
+$nome        = $_POST['nome_time'];
+$conferencia = $_POST['conferencia'];
+$divisao     = $_POST['divisao'];
 
-
-$query = "INSERT INTO times(nome_time,conferencia,divisao) VALUES ('$nome','$conferencia','$divisao');";
-DBExecute($query);
-
+$time=new Time;
+$time->insereTime($nome,$conferencia,$divisao);
 
 header("Location: ../index.php");
 

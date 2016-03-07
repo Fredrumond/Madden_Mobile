@@ -1,13 +1,15 @@
 <?php 
 
-require_once"../DB/conexao.php";
+require_once ('../class/ConDB.class.php');
+require_once ('../class/CRUD.class.php');
+require_once ('../class/Jogador.class.php');
 
-$nome_jogador = DBEscape($_POST['nome_jogador']);
-$posicao = DBEscape($_POST['posicao']);
-$avg_jogador = DBEscape($_POST['avg_jogador']);
+$nome_jogador = $_POST['nome_jogador'];
+$posicao      = $_POST['posicao'];
+$avg_jogador  = $_POST['avg_jogador'];
 
-$query = "INSERT INTO jogadores(nome_jogador,posicao,avg_jogador) VALUES ('$nome_jogador','$posicao','$avg_jogador');";
-DBExecute($query);
+$jogador=new Jogador;
+$jogador->insereJogador($nome_jogador,$posicao,$avg_jogador);
 
 
 header("Location: ../index.php");

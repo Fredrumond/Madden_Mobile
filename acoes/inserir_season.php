@@ -1,17 +1,16 @@
-<?php 
+<?php
 
-require_once"../DB/conexao.php";
+require_once ('../class/ConDB.class.php');
+require_once ('../class/CRUD.class.php');
+require_once ('../class/Season.class.php');
 
-$nome_season = DBEscape($_POST['nome_season']);
-$data_inicio = DBEscape($_POST['data_inicio']);
-$data_final = DBEscape($_POST['data_final']);
+$nome_season = $_POST['nome_season'];
+$data_inicio = $_POST['data_inicio'];
+$data_final  =  $_POST['data_final'];
 
+$season=new Season;
+$season->insereSeason($nome_season,$data_inicio,$data_final);
 
-$query = "INSERT INTO season(nome_season,data_inicio,data_final) VALUES ('$nome_season','$data_inicio','$data_final');";
-DBExecute($query);
-
-
-header("Location: ../season_teste.php");
-
+header("Location: ../index.php");
 
 ?>
