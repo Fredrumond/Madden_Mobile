@@ -6,23 +6,23 @@ class Jogador extends CRUD {
     private $id_jogador;
 	private $nome_jogador;
 	private $posicao;
-	private $avg_jogador;	
+	private $avg_jogador;
+    private $crd;
 
-    public function insereJogador($nome_jogador,$posicao,$avg_jogador){
-    	$crd = new CRUD();
-        $crd->insert('jogadores','nome_jogador=?,posicao=?,avg_jogador=?',array($nome_jogador,$posicao,$avg_jogador));
+    public function __construct(){
+        $this->crd = new CRUD();
+    }	
+
+    public function insereJogador($nome_jogador,$posicao,$avg_jogador){    	
+        $this->crd->insert('jogadores','nome_jogador=?,posicao=?,avg_jogador=?',array($nome_jogador,$posicao,$avg_jogador));
     }
-
-    #BUGADA
+    
     public function editaJogador($nome_jogador,$posicao,$avg_jogador,$id_jogador){
-    	$crd = new CRUD();
-    	$crd->update('jogadores','nome_jogador=?,posicao=?,avg_jogador=? WHERE id_jogador=?',array($nome_jogador,$posicao,$avg_jogador,$id_jogador));
+    	$this->crd->update('jogadores','nome_jogador=?,posicao=?,avg_jogador=? WHERE id_jogador=?',array($nome_jogador,$posicao,$avg_jogador,$id_jogador));
     }
-
-    #BUGADA
-    public function deletaJogador($id_jogador){
-    	$crd = new CRUD();
-        $crd->delete('jogadores','WHERE id_jogador=?',array($id_jogador));        
+    
+    public function deletaJogador($id_jogador){    	
+        $this->crd->delete('jogadores','WHERE id_jogador=?',array($id_jogador));        
     }
 }
 

@@ -12,21 +12,22 @@ class Time extends CRUD {
     private $derrota;
     private $pontos_convertidos;
     private $pontos_sofridos;
+    private $crd;
 
-    public function insereTime($nome_time,$conferencia,$divisao){
-    	$crd = new CRUD();
-        $crd->insert('times','nome_time=?,conferencia=?,divisao=?',array($nome_time,$conferencia,$divisao));
-    	
+    public function __construct(){
+        $this->crd = new CRUD();
     }
 
-    public function editaTime($nome_time,$conferencia,$divisao,$id_time){
-    	$crd = new CRUD();
-    	$crd->update('times','nome_time=?,conferencia=?,divisao=? WHERE id_time=?',array($nome_time,$conferencia,$divisao,$id_time));
+    public function insereTime($nome_time,$conferencia,$divisao){    	
+        $this->crd->insert('times','nome_time=?,conferencia=?,divisao=?',array($nome_time,$conferencia,$divisao));    	
+    }
+
+    public function editaTime($nome_time,$conferencia,$divisao,$id_time){    	
+    	$this->crd->update('times','nome_time=?,conferencia=?,divisao=? WHERE id_time=?',array($nome_time,$conferencia,$divisao,$id_time));
     }
     
-    public function deletaTime($id_time){
-    	$crd = new CRUD();
-        $crd->delete('times','WHERE id_time=?',array($id_time));
+    public function deletaTime($id_time){    	
+        $this->crd->delete('times','WHERE id_time=?',array($id_time));
     }
 }
 

@@ -7,17 +7,17 @@
 	require_once ('Jogador.class.php');
 
 	#$season=new Season;
-	#$season->insereSeason('teste2','11/11/11','12/12/12');
-	#$season->editaSeason('7','Season 4','13/13/13','14/14/14');
-	#$season->deletaSeason(4);
+	#$season->insereSeason('teste22222','11/11/11','12/12/12');
+	#$season->editaSeason('11','Season 4','13/13/13','14/14/14');
+	#$season->deletaSeason(11);
 
 	#$week=new Week;
-	#$week->insereWeek('3','5','1','24','50','32','0','0');
-	#$week->editaWeek('3','5','1','24','100','100','0','0','10');
-	#$week->deletaWeek(9);
+	#$week->insereWeek('3','5','1','25','70','70','0','0');
+	#$week->editaWeek('3','5','1','24','100','100','0','0','25');
+	#$week->deletaWeek(10);
 
 	#$time=new Time;
-	#$time->insereTime('time teste','1','1');
+	#$time->insereTime('time teste2','1','1');
 	#$time->editaTime('testado','2','2','33');
 	#$time->deletaTime(34);
 
