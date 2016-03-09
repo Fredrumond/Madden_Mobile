@@ -147,16 +147,13 @@
 <table class="table">
 	<tr bgcolor="#00afef">					
 		<td>Nome</td>		
-		<td>Jogos</td>
-		
+		<td>Jogos</td>		
 		<td>PC</td>
 		<td>PS</td>					
 	</tr>			
 	<?php
-		$teste1 = 0;
-		$teste2 = 0;
-		$teste3 = 0;
-		$query = "SELECT nome_time,COUNT(nome_time),SUM(placar_h),SUM(placar_a) FROM times INNER JOIN week WHERE week.adversario = times.id_time";
+		#SELECT adversario, count(adversario) as adversarioAlias,...
+		$query = "SELECT adversario,COUNT(adversario) as adversarioAlias,SUM(placar_h) as convertidos,SUM(placar_a) as sofridos,nome_time  FROM  week INNER JOIN times WHERE week.adversario = times.id_time  GROUP BY adversario;";
 		$result = DBExecute($query);		
 		$linha = mysqli_num_rows($result);						
 		while ($row = mysqli_fetch_array($result)) 
@@ -164,9 +161,10 @@
     ?>
 	<tr>
 		<td><?php echo $row['nome_time']?></td>
-		<td><?php echo $teste1?></td>
-		<td><?php echo $teste2?></td>	
-		<td><?php echo $teste3?></td>							 		        
+		<td><?php echo $row['adversarioAlias']?></td>
+		<td><?php echo $row['convertidos']?></td>
+		<td><?php echo $row['sofridos']?></td>
+								 		        
 	</tr>
 	<?php
 		}	
