@@ -27,6 +27,34 @@
 	#$jogador->editaJogador('Andre Tonson','1','98','2');
 	#$jogador->deletaJogador(5);
 
-
+	/*$crud=new CRUD;
+	$sel=$crud->select('*','season','',array());
+	foreach($sel as $reg){		
+		print $reg['id_season']."\t";
+		print $reg['nome_season']."\n";
+	}*/
 
 ?>
+	Season
+	<select name="season" >
+		<option>Season</option>
+		<?php			
+			$crud=new CRUD;
+			$sel=$crud->select('*','season','',array());
+			foreach($sel as $reg){
+		?>
+		 	<option value="<?php print $reg['id_season'] ?>"><?php print $reg['nome_season'] ?></option>
+		<?php }?>					
+	</select>
+
+	Adversario
+	<select name="adversario" >
+		<option>Adversario</option>
+		<?php			
+			$crud=new CRUD;
+			$sel=$crud->select('*','times','ORDER BY nome_time ASC',array());
+			foreach($sel as $reg){
+		?>
+		 	<option value="<?php print $reg['id_time'] ?>"><?php print $reg['nome_time'] ?></option>
+		<?php }?>					
+	</select>

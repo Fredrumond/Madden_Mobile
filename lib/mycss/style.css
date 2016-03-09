@@ -1,0 +1,80 @@
+/*NAVEGADOR --->INICIO<---*/
+
+	nav{position: absolute;top: 100px;width:100%;}
+
+	.header	{ position:absolute;background:#231f20;width:100%;height:45px;}
+
+	.active	{
+	  -webkit-box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	  -moz-box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	  box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	}
+	.nav{
+	  position:relative;
+	  float:left;
+	  left:5%;
+	}
+	.nav ul li{
+	  list-style-type:none;
+	  position:relative;
+	  float:left;
+	  padding:12px 0px;
+	  height:auto;
+	}
+	.nav ul li a{
+	  font-family: Arial;
+	  font-size:1em;
+	  font-weight:1;
+	  color:#fff;
+	  text-decoration:none;
+	  padding:15px;
+	  z-index: 2;
+	}
+	/*.nav ul li a:hover{
+	  color:#DCDCDC;
+	  -webkit-box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	  -moz-box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	  box-shadow: inset 0px -4px 0px 0px #F5F5F5;
+	}*/
+
+	.nav ul > li > ul{visibility: hidden;position: absolute;z-index: 2;}
+
+	.nav ul > li:hover > ul{
+				
+				visibility: visible;
+				text-align: left;
+				background: #00afef;
+				z-index: 2;
+			}
+
+
+body{
+		background:#EEE;
+		background-size: 100% 100%;
+	}
+
+
+.caixa{
+	background: #231f20;
+	top: 100px;
+	margin:0;	
+	padding:0;
+	border-width:2px;
+	border-style:solid;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.caixa2{
+	background: red;
+	top: 100px;
+	margin:0;	
+	padding:0;
+	border-width:2px;
+	border-style:solid;
+	border-radius: 5px;
+	color: #fff;
+}
+
+
+	
