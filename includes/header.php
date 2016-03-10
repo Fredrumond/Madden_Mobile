@@ -25,8 +25,8 @@
       <div class="header">    
         <div class="nav">
           <ul>
-            <li><a href="#">MENU</a></li>
-            <li><a href="#">MENU</a></li>          
+            <li><a href="index.php">Home</a></li>
+            <li><a href="historico.php">Historico</a></li>          
           </ul>
         </div>
       </div>

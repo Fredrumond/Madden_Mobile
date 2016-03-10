@@ -5,35 +5,7 @@
       <!--HISTORICO-->
       <div class="col-md-7 caixa">        
         <div class="historico">
-          <table  class="table">
-            <tr>              
-              <td>Time</td>
-              <td>Jogos</td>   
-              
-              <td>PC</td>
-              <td>PS</td>                        
-            </tr>            
-              <?php     
-                $crud=new CRUD;
-                #SELECT adversario,COUNT(adversario) as adversarioAlias,SUM(placar_h) as convertidos,SUM(placar_a) as sofridos,nome_time  
-                #FROM  week 
-                #INNER JOIN times 
-                #WHERE week.adversario = times.id_time  
-                #GROUP BY adversario;
-                $sel=$crud->select('adversario,COUNT(adversario) as adversarioAlias,SUM(placar_h) as convertidos,SUM(placar_a) as sofridos,nome_time,logo','week','INNER JOIN times WHERE week.adversario = times.id_time GROUP BY adversario',array());
-                foreach($sel as $reg){
-              ?>
-            <tr>
-                <td><img src="<?php print $reg['logo'] ?>"> <?php print $reg['nome_time'] ?></td>
-                <td><?php print $reg['adversarioAlias'] ?></td>
-                
-                <td><?php print $reg['convertidos'] ?></td>
-                <td><?php print $reg['sofridos'] ?></td>
-              <?php }?>
-            </tr>         
-            </select>  
-
-          </table>
+          <?php require_once ('visualizar_historico.php');?>
         </div>
       </div>
       <div class="col-md-1"></div>
