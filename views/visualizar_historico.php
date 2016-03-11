@@ -14,7 +14,8 @@
               <td>Casa</td>
               <td>Fora</td>
               <td>PC</td>
-              <td>PS</td>                                     
+              <td>PS</td>
+              <td>Aproveitamento</td>                                     
             </tr>            
               <?php     
                 $crud=new CRUD;
@@ -48,16 +49,36 @@
                 <td><?php print $convertidos = $reg['convertidos'] ?></td>
                 <td><?php print $sofridos = $reg['sofridos'] ?></td>                
               <?php 
-                $lugar++;                
+                $lugar++;
+
                 $somaPontosConvertidos = $convertidos;
                 $somaPontosSofridos = $sofridos;
                 $totalConvertidos = $totalConvertidos + $somaPontosConvertidos;
-                $totalSofridos = $totalSofridos + $somaPontosSofridos; 
+                $totalSofridos = $totalSofridos + $somaPontosSofridos;
+
+                $aproveitamento = ($reg['vitorias'] / $reg['jogos']) * 100;
+
+
                
               ?>
-                
+                <td><?php print number_format($aproveitamento,1,",",".") . '%' ?></td>
               <?php
               }?>
               
             </tr>
-          </table>
+</table>
+
+<table  class="table">                          
+  <tr>              
+    <td>Jogos</td>
+    <td>Vitorias</td>
+    <td>Derrotas</td>
+    <td>PC</td>
+    <td>PS</td>              
+    <td>Aproveitamento</td>                  
+  </tr>
+  <tr>
+
+  </tr>                 
+</table>
+
