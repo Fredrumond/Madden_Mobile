@@ -5,7 +5,7 @@
       <!--HISTORICO-->
       <div class="col-md-7 caixa">        
         <div class="historico">
-          <?php require_once ('visualizar_historico.php');?>
+          <?php require_once ('views/visualizar_historico.php');?>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -21,33 +21,7 @@
               <td>Fora</td>
               <td>Casa</td>                 
             </tr>
-            <tr>              
-              <td>1</td>
-              <td><img src="libs/img/Patriots2.png"> Patriots</td>
-              <td>34</td>
-              <td>x</td>
-              <td>10</td>
-              <td>X</td>
-              <td></td>                 
-            </tr>
-            <tr>              
-              <td>2</td>
-              <td><img src="libs/img/Broncos2.png"> Broncos</td>
-              <td>54</td>
-              <td>x</td>
-              <td>30</td>
-              <td></td>
-              <td>X</td>                 
-            </tr>
-            <tr>              
-              <td>2</td>
-              <td><img src="libs/img/Texans2.png"> Texans</td>
-              <td>54</td>
-              <td>x</td>
-              <td>30</td>
-              <td></td>
-              <td>X</td>                 
-            </tr>                         
+                 
           </table>
         
       </div>
