@@ -26,7 +26,7 @@
         <div class="nav">
           <ul>
             <li><a href="index.php">#</a></li>
-            <li><a href="#"></a>#</li>          
+            <li><a href="season.php">Season</a></li>          
           </ul>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 <table class="table">	
 	<?php
-		$season = 2;		
+		$season = 1;		
 		$query = "SELECT * FROM season WHERE id_season = $season;";
 		$query2 = "SELECT id_season,week,adversario,placar_h,placar_a,casa,fora,nome_time FROM week 
 		INNER JOIN times WHERE week.adversario = times.id_time and id_season = $season;";
