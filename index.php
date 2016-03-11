@@ -3,7 +3,8 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <!--HISTORICO-->
-      <div class="col-md-7 caixa">        
+      <div class="col-md-7 caixa"> 
+
         <div class="historico">
           <?php require_once ('views/visualizar_historico.php');?>
         </div>
