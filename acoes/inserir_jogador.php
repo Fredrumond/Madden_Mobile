@@ -12,7 +12,7 @@ $jogador=new Jogador;
 $jogador->insereJogador($nome_jogador,$posicao,$avg_jogador);
 
 
-header("Location: ../index.php");
+header("Location: ../index2.php");
 
 
 ?>

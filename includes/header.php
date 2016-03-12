@@ -26,7 +26,8 @@
         <div class="nav">
           <ul>
             <li><a href="index.php">#</a></li>
-            <li><a href="season.php">Season</a></li>          
+            <li><a href="season.php">Season</a></li>  
+            <li><a href="jogadores.php">Jogadores</a></li>         
           </ul>
         </div>
       </div>
