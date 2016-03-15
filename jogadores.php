@@ -17,7 +17,8 @@
               <td>Posicao</td>    
               <td>AVG</td>
               <td>Season Entrada</td>
-              <td>Season Saida</td>          
+              <td>Season Saida</td>
+              <td>Ações</td>          
             </tr>
             <?php     
                 $crud=new CRUD; 
@@ -31,6 +32,10 @@
               <td><?php print $reg['avg_jogador'] ?></td>
               <td><?php print $reg['nome_season'] ?></td>
               <td><?php print $reg['nome_season'] ?></td>
+              <td>
+                <a href='acoes/editar-jogador.php?&id=<?php echo $reg['id_jogador'];?>' class="glyphicon glyphicon-wrench" ></a>
+              </td>
+              
             </tr>
             <?php } ?>
                   
@@ -56,7 +61,8 @@
             <tr>
               <td><?php print $reg['nome_jogador'] ?></td>
               <td><?php print $reg['sigla_posicao'] ?></td>
-              <td><?php print $reg['avg_jogador'] ?></td>
+              <td><?php print $reg['avg_jogador'] ?></td>              
+              <td></td>
             </tr>
             <?php } ?>
                   
