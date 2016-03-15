@@ -25,7 +25,7 @@
       <div class="header">    
         <div class="nav">
           <ul>
-            <li><a href="index.php">#</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="season.php">Season</a></li>  
             <li><a href="jogadores.php">Jogadores</a></li>         
           </ul>

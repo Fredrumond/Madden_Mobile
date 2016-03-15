@@ -33,7 +33,7 @@
               <td><?php print $reg['nome_season'] ?></td>
               <td><?php print $reg['nome_season'] ?></td>
               <td>
-                <a href='acoes/editar-jogador.php?&id=<?php echo $reg['id_jogador'];?>' class="glyphicon glyphicon-wrench" ></a>
+                <a href='acoes/form-editar-jogador.php?&id=<?php echo $reg['id_jogador'];?>' class="glyphicon glyphicon-wrench" ></a>
               </td>
               
             </tr>

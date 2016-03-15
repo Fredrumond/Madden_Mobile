@@ -7,6 +7,7 @@ class Jogador extends CRUD {
 	private $nome_jogador;
 	private $posicao;
 	private $avg_jogador;
+    private $status;
     private $crd;
 
     public function __construct(){
@@ -17,8 +18,8 @@ class Jogador extends CRUD {
         $this->crd->insert('jogadores','nome_jogador=?,posicao=?,avg_jogador=?',array($nome_jogador,$posicao,$avg_jogador));
     }
     
-    public function editaJogador($nome_jogador,$posicao,$avg_jogador,$id_jogador){
-    	$this->crd->update('jogadores','nome_jogador=?,posicao=?,avg_jogador=? WHERE id_jogador=?',array($nome_jogador,$posicao,$avg_jogador,$id_jogador));
+    public function editaJogador($nome_jogador,$posicao,$avg_jogador,$status,$id_jogador){
+    	$this->crd->update('jogadores','nome_jogador=?,posicao=?,avg_jogador=?,status=? WHERE id_jogador=?',array($nome_jogador,$posicao,$avg_jogador,$status,$id_jogador));
     }
     
     public function deletaJogador($id_jogador){    	
