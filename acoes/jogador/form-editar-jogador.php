@@ -1,6 +1,6 @@
 <?php
-require_once ('../class/ConDB.class.php');
-require_once ('../class/CRUD.class.php');
+require_once ('../../class/ConDB.class.php');
+require_once ('../../class/CRUD.class.php');
 
 $id = $_GET["id"];
 
@@ -8,7 +8,7 @@ $crd=new CRUD;
 $sel=$crd->select('*','jogadores','WHERE id_jogador = '.$id.'',array());
 
 foreach($sel as $reg){
-	print $reg['status'];
+	#print $reg['status'];
 
 }
 ?>

@@ -1,5 +1,4 @@
 <?php
-
 require_once ('../class/ConDB.class.php');
 require_once ('../class/CRUD.class.php');
 require_once ('../class/Season.class.php');

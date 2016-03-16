@@ -4,10 +4,10 @@ require_once ('CRUD.class.php');
 class Week extends CRUD {
 
     private $id_week;
-	private $id_season;
-	private $week;
-	private $id_jogo;
-	private $adversario;
+    private $id_season;
+    private $week;
+    private $id_jogo;
+    private $adversario;
     private $placar_h;
     private $placar_a;
     private $fora;

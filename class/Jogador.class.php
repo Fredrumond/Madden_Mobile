@@ -4,9 +4,9 @@ require_once ('CRUD.class.php');
 class Jogador extends CRUD {
 
     private $id_jogador;
-	private $nome_jogador;
-	private $posicao;
-	private $avg_jogador;
+    private $nome_jogador;
+    private $posicao;
+    private $avg_jogador;
     private $status;
     private $crd;
 

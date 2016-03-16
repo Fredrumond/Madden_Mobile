@@ -1,8 +1,7 @@
 <?php 
-
-require_once ('../class/ConDB.class.php');
-require_once ('../class/CRUD.class.php');
-require_once ('../class/Jogador.class.php');
+require_once ('../../class/ConDB.class.php');
+require_once ('../../class/CRUD.class.php');
+require_once ('../../class/Jogador.class.php');
 
 $nome_jogador = $_POST['nome_jogador'];
 $posicao      = $_POST['posicao'];
@@ -12,7 +11,7 @@ $jogador=new Jogador;
 $jogador->insereJogador($nome_jogador,$posicao,$avg_jogador);
 
 
-header("Location: ../index2.php");
+header("Location: ../../index2.php");
 
 
 ?>

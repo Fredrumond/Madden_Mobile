@@ -4,10 +4,10 @@ require_once ('CRUD.class.php');
 class Time extends CRUD {
 
     private $id_time;
-	private $nome_time;
-	private $conferencia;
-	private $divisao;
-	private $qtd_jogos;
+    private $nome_time;
+    private $conferencia;
+    private $divisao;
+    private $qtd_jogos;
     private $vitoria;
     private $derrota;
     private $pontos_convertidos;
