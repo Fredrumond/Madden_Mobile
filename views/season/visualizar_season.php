@@ -11,7 +11,7 @@ require_once ('class/CRUD.class.php');
   $sel=$crud->select('*','season','WHERE id_season = 3',array());
   foreach($sel as $reg){
     ?>
-    <h4><?php print $reg['nome_season'] . '- Inicio: ' . $reg['data_inicio'] . ' Final: ' . $reg['data_final']  ?>
+    <h4><?php print $reg['nome_season'] . '- Inicio: ' . $reg['data_inicio'] . ' Final: ' . $reg['data_final']  ?> </h4>
       <?php }?>
       <div class='regular'>
         <img src="libs/img/regular_season2.png">

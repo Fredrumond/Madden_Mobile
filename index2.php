@@ -6,7 +6,7 @@ require_once ('class/CRUD.class.php');
 ?>
 
 <!--Inserir Jogo-->
-<form method="POST" action="acoes/inserir_jogo.php">
+<form method="POST" action="acoes/jogo/inserir_jogo.php">
 	Season
 	<select name="season" >
 		<option>Season</option>

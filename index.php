@@ -11,9 +11,10 @@
     <!--ESPAÇO DE UMA COLUNA-->
     <div class="col-md-1"></div>
 
-    <!--DETALHES-->
-    <div class="col-md-4 caixa ">         
-      
+    <!--Inserir Jogo-->    
+    <div class="col-md-4 caixa ">
+    <h4>Inserir Jogo</h4>         
+      <?php require_once ('acoes/jogo/form_inserir_jogo.php');?>    
     </div>
     
   </div>

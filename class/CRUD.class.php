@@ -7,7 +7,11 @@ class CRUD extends ConDB{
 	}
 	
 	public function insert($table,$prep,$exec){
+		#echo '<pre>';
+		#print_r($exec);
+		#die('INSERT INTO '.$table.' SET '.$prep.'');
 		$this->prepExec('INSERT INTO '.$table.' SET '.$prep.'',$exec);
+
 	}
 	
 	public function select($fields,$table,$prep,$exec){
