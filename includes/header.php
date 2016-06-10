@@ -12,11 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />    
     <title>MADDEN MOBILE</title>
   
-  <!-- Bootstrap -->
-  <link href="libs/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- My Css --> 
-  <link rel="stylesheet" type="text/css" href="libs/mycss/style.css">
+    <!-- Bootstrap -->
+    <link href="libs/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    
+    <!-- My Css --> 
+    <link rel="stylesheet" type="text/css" href="libs/mycss/style.css">
 </head>
 <body>
    <img src="libs/img/madden-logo.png">
